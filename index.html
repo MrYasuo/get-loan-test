@@ -2333,8 +2333,8 @@
 					border-radius: 20px;
 				}
 				#VIDEO194 {
-					width: 400px;
-					height: 229.054px;
+					width: 516.636px;
+					height: 360.422px;
 					top: 132px;
 					left: 10px;
 					background-size: 100%;
@@ -21591,7 +21591,9 @@
 					mode: "cors",
 					body: new FormData(form1),
 				})
-					.then((response) => alert("Đăng ký thành công!!"))
+					.then((response) => {
+						document.querySelector(".ladi-popup").style.display = "none";
+						alert("Đăng ký thành công!!")})
 					.catch((error) => alert("Có lỗi xảy ra, vui lòng thử lại sau"));
 			});
 			form2.addEventListener("submit", (e) => {
