@@ -21591,9 +21591,7 @@
 					mode: "cors",
 					body: new FormData(form1),
 				})
-					.then((response) => {
-						document.querySelector(".ladi-popup").style.display = "none";
-						alert("Đăng ký thành công!!")})
+					.then((response) => alert("Đăng ký thành công!!"))
 					.catch((error) => alert("Có lỗi xảy ra, vui lòng thử lại sau"));
 			});
 			form2.addEventListener("submit", (e) => {
@@ -21603,7 +21601,9 @@
 					mode: "cors",
 					body: new FormData(form2),
 				})
-					.then((response) => alert("Đăng ký thành công!!"))
+					.then((response) => {
+						document.querySelector(".popup-close").click();
+						alert("Đăng ký thành công!!")})
 					.catch((error) => alert("Có lỗi xảy ra, vui lòng thử lại sau"));
 			});
 		</script>
